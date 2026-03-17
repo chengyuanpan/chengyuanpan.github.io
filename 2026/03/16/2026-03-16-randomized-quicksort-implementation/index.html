@@ -618,48 +618,55 @@
 
         
             
-    <div id="waline"></div>
-    <script type="module" data-swup-reload-script>
-      import { init } from '/js/libs/waline.js';
+    <div id="gitalk-container"></div>
+    <script data-swup-reload-script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js"></script>
+    <script data-swup-reload-script>
+        (function() {
+            const startPath = location.pathname;
+            const startTime = Date.now();
+            const retryDelay = 200;
+            const retryLimit = 5000;
 
-      (function() {
-        const startPath = location.pathname;
-        const startTime = Date.now();
-        const retryDelay = 200;
-        const retryLimit = 5000;
+            const runGitalk = () => {
+                if (location.pathname !== startPath) {
+                    return;
+                }
 
-        const runWaline = () => {
-          if (location.pathname !== startPath) {
-            return;
-          }
+                const container = document.getElementById('gitalk-container');
+                if (!container || typeof Gitalk === 'undefined') {
+                    if (Date.now() - startTime < retryLimit) {
+                        setTimeout(runGitalk, retryDelay);
+                    }
+                    return;
+                }
 
-          const container = document.getElementById('waline');
-          if (!container) {
-            if (Date.now() - startTime < retryLimit) {
-              setTimeout(runWaline, retryDelay);
-            }
-            return;
-          }
+                container.innerHTML = '';
 
-          if (window.redefineWalineInstance?.destroy) {
-            window.redefineWalineInstance.destroy();
-          }
+                let pageKey = decodeURI(location.pathname);
+                const maxLength = 50;
+                if (pageKey.length > maxLength) {
+                    pageKey = pageKey.substring(0, maxLength - 3) + '...';
+                }
 
-          container.innerHTML = '';
-          window.redefineWalineInstance = init({
-            el: '#waline',
-            serverURL: 'https://example.example.com',
-            path: location.pathname,
-            dark: 'body[class~="dark-mode"]',
-            reaction: false,
-            requiredMeta: ['nick', 'mail'],
-            emoji: [],
-                      lang: 'zh-CN',
-          });
-        };
+                try {
+                    new Gitalk({
+                        clientID: 'Ov23liC73VPGseRQkcTV',
+                        clientSecret: '74ab417408bcce8f71666c28186be4ae05273532',
+                        repo: 'GitTalk',
+                        owner: 'chengyuanpan',
+                        admin: ['chengyuanpan'],
+                        id: pageKey,
+                        language: 'en',
+                        proxy: 'https://github.com/login/oauth/access_token'
+                    }).render(container);
+                } catch (e) {
+                    window.Gitalk = null;
+                }
+            };
 
-        runWaline();
-      })();
+            runGitalk();
+        })();
     </script>
 
 
