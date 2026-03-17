@@ -1,6 +1,6 @@
-## Chengyuan Pan's Tech Blog
+## Chengyuan Pan's Personal Website
 
-A personal tech blog hosted on **GitHub Pages**, built with **[Hexo 8](https://hexo.io/)** and the **[Redefine](https://github.com/EvanNotFound/hexo-theme-redefine)** theme.
+A personal website hosted on **GitHub Pages**, built with **[Hexo 8](https://hexo.io/)** and the **[Redefine](https://github.com/EvanNotFound/hexo-theme-redefine)** theme.
 
 Live site: [chengyuanpan.github.io](https://chengyuanpan.github.io)
 
@@ -76,7 +76,7 @@ Edit `_config.redefine.yml` to personalise the site name, avatar, social links, 
 Open `_config.yml` and fill in the basic details:
 
 ```yaml
-title:       Your Name's Tech Blog
+title:       Your Name's Personal Website
 subtitle:    A short tagline about you
 description: A short tagline about you
 author:      Your Name
