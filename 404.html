@@ -539,23 +539,6 @@
         
                 
         
-                
-
-                    
-                        <style> .custom-back-button { position: fixed; top: 90px; left: 20px; z-index: 999; padding: 8px 14px; border-radius: 999px; border: none; background: rgba(40, 188, 124, 0.8); color: #ffffff !important; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 6px; backdrop-filter: blur(6px); transition: transform 0.15s ease-out, background 0.15s ease-out, opacity 0.15s ease-out; } .custom-back-button:hover { transform: translateY(-1px); background: rgba(40, 188, 124, 0.9); color: #ffffff !important; } .custom-back-button:active { transform: translateY(0); color: #ffffff !important; } .custom-back-button-icon { font-size: 1rem; color: #ffffff !important; } .custom-back-button-text { color: #ffffff !important; } @media (max-width: 768px) { .custom-back-button { top: 78px; left: 14px; padding: 7px 12px; font-size: 0.8rem; } } </style>
-                    
-        
-                
-
-                    
-                        <script data-swup-reload-script> (function () { if (typeof window === "undefined") return;
-function ensureButton() { var btn = document.querySelector(".custom-back-button"); if (!btn) { btn = document.createElement("a"); btn.className = "custom-back-button"; btn.href = "javascript:void(0)"; btn.innerHTML = "<span class=\"custom-back-button-icon\">&#8592;</span><span class=\"custom-back-button-text\">Back</span>"; btn.addEventListener("click", function (e) { e.preventDefault(); if (window.history.length > 1) { window.history.back(); } }); document.body.appendChild(btn); } return btn; }
-function isHome() { var path = window.location.pathname || "/"; return path === "/" || path === "/index.html"; }
-function updateVisibility() { var btn = ensureButton(); if (isHome() || window.history.length <= 1) { btn.style.display = "none"; } else { btn.style.display = "flex"; } }
-if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", updateVisibility); } else { updateVisibility(); }
-document.addEventListener("swup:contentReplaced", updateVisibility); window.addEventListener("popstate", updateVisibility); })(); </script>
-                    
-        
         
     </div>  
 </footer>
