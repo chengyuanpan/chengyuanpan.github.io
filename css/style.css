@@ -1776,7 +1776,7 @@ pre .deletion {
   position: relative;
   height: 100%;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1785,7 +1785,7 @@ pre .deletion {
   transition: max-width 0.3s ease;
 }
 .navbar-container .navbar-content.has-home-banner {
-  max-width: 1200px;
+  max-width: 1000px;
 }
 .navbar-container .navbar-content .left {
   display: flex;
@@ -2080,7 +2080,7 @@ pre .deletion {
   transition: max-width 0.3s ease-out;
 }
 html.is-animating .transition-navbar {
-  max-width: 1200px !important;
+  max-width: 1000px !important;
   transition: max-width 0.2s ease-out;
 }
 .page-template-container {
@@ -4287,7 +4287,7 @@ div.tabs .tab-content .tab-pane *:first-child {
   position: relative;
   box-sizing: border-box;
   width: 80%;
-  max-width: 1200px;
+  max-width: 1000px;
   height: 100%;
   transition-property: color, background, box-shadow, border-color, max-width, width;
   transition-delay: 0s, 0s, 0s, 0s, 0s, 0s;
@@ -4305,7 +4305,7 @@ div.tabs .tab-content .tab-pane *:first-child {
   }
 }
 .page-container .main-content-container .main-content-body .main-content.has-toc {
-  max-width: 1440px !important;
+  max-width: 1200px !important;
 }
 .page-container .main-content-container .main-content-body .main-content-footer {
   width: 100%;
@@ -4713,7 +4713,7 @@ html.is-animating .transition-fade-down {
   display: block;
   opacity: 1;
   transition: opacity 0.2s ease-in 0.2s;
-  width: 300px;
+  width: 210px;
 }
 .post-page-container.show-toc .toc-content-container:hover::-webkit-scrollbar-thumb {
   border: 3px solid rgba(183,183,183,0.3);
