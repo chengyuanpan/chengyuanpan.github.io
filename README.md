@@ -1,4 +1,4 @@
-## Chengyuan Pan's Personal Website
+## Alvar (Chengyuan) Pan's Personal Website
 
 A personal website hosted on **GitHub Pages**, built with **[Hexo 8](https://hexo.io/)** and the **[Redefine](https://github.com/EvanNotFound/hexo-theme-redefine)** theme.
 
