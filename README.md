@@ -1,4 +1,4 @@
-## PAN, Chengyuan（潘承远）'s Personal Website
+## PAN Chengyuan（潘承远）'s Personal Website
 
 A personal website hosted on **GitHub Pages**, built with **[Hexo 8](https://hexo.io/)** and the **[Redefine](https://github.com/EvanNotFound/hexo-theme-redefine)** theme.
 
